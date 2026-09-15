@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT102 - Midterm Activity 1</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-image: url("./background.png");
+
+            color: #212529;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0d6efd, #084298);
+            color: white;
+            padding: 70px 20px;
+        }
+
+        .hero-badge {
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .section-title {
+            font-weight: 700;
+        }
+
+        .activity-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .activity-header {
+            padding: 25px;
+            color: white;
+        }
+
+        .student-one {
+            background: linear-gradient(135deg, #198754, #146c43);
+        }
+
+        .student-two {
+            background: linear-gradient(135deg, #6f42c1, #59359a);
+        }
+
+        .code-box {
+            background-color: #212529;
+            color: #f8f9fa;
+            padding: 18px;
+            border-radius: 10px;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+
+        .output-box {
+            background-color: #eef2f7;
+            border-left: 4px solid #0d6efd;
+            padding: 18px;
+            border-radius: 8px;
+            font-family: Consolas, monospace;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .table th {
+            white-space: nowrap;
+        }
+
+        .rule-card {
+            border-left: 5px solid #ffc107;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-code-slash me-2"></i>
+                IT102
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#part1">Student 1</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#part2">Student 2</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#submission">Submission</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero text-center">
+
+        <div class="container">
+
+            <span class="badge hero-badge px-3 py-2 mb-3">
+                MIDTERM ACTIVITY 1
+            </span>
+
+            <h1 class="display-5 fw-bold">
+                IT102 – Computer Programming
+            </h1>
+
+            <p class="lead mb-4">
+                C++ Conditional Statements, Switch, and Loops
+            </p>
+
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+
+                <span class="badge bg-light text-dark px-3 py-2">
+                    <i class="bi bi-code-slash me-1"></i>
+                    C++
+                </span>
+
+                <span class="badge bg-light text-dark px-3 py-2">
+                    <i class="bi bi-diagram-3 me-1"></i>
+                    if-else
+                </span>
+
+                <span class="badge bg-light text-dark px-3 py-2">
+                    <i class="bi bi-ui-checks me-1"></i>
+                    switch
+                </span>
+
+                <span class="badge bg-light text-dark px-3 py-2">
+                    <i class="bi bi-arrow-repeat me-1"></i>
+                    loops
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title text-white">
+                    Activity Overview
+                </h2>
+
+                <p class=" text-white">
+                    Read the instructions carefully before starting your assigned task.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- Objective -->
+                <div class="col-md-6">
+
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="card-body p-4">
+
+                            <div class="text-primary fs-2 mb-3">
+                                <i class="bi bi-bullseye"></i>
+                            </div>
+
+                            <h4>Learning Objectives</h4>
+
+                            <p>
+                                At the end of this activity, students should be able to:
+                            </p>
+
+                            <ul>
+                                <li>Apply conditional statements in C++.</li>
+                                <li>Use <strong>switch</strong> statements for menu selection.</li>
+                                <li>Use a <strong>while loop</strong> to repeat a process.</li>
+                                <li>Use a <strong>for loop</strong> for controlled repetition.</li>
+                                <li>Perform basic arithmetic calculations in C++.</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Setup -->
+                <div class="col-md-6">
+
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="card-body p-4">
+
+                            <div class="text-success fs-2 mb-3">
+                                <i class="bi bi-pc-display"></i>
+                            </div>
+
+                            <h4>Activity Setup</h4>
+
+                            <p>
+                                This activity has <strong>two different parts</strong>.
+                                Students will be assigned based on their seat or computer.
+                            </p>
+
+                            <div class="alert alert-success">
+                                <strong>Student 1</strong><br>
+                                Complete <strong>Part 1</strong>.
+                            </div>
+
+                            <div class="alert alert-primary">
+                                <strong>Student 2</strong><br>
+                                Complete <strong>Part 2</strong>.
+                            </div>
+
+                            <p class="mb-0 text-muted">
+                                Students seated beside each other may receive different tasks.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Alternating rule -->
+            <div class="card rule-card shadow-sm mt-4">
+
+                <div class="card-body p-4">
+
+                    <h5>
+                        <i class="bi bi-info-circle-fill text-warning me-2"></i>
+                        Alternating Assignment Rule
+                    </h5>
+
+                    <p class="mb-0">
+                        The instructor may assign the activity alternately per seat or computer.
+                        For example:
+                        <strong>Computer 1 – Student 1</strong>,
+                        <strong>Computer 2 – Student 2</strong>,
+                        <strong>Computer 3 – Student 1</strong>,
+                        and so on.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONCEPTS -->
+    <section class="py-5 bg-white">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title">
+                    Concepts You Will Use
+                </h2>
+
+                <p class="text-muted">
+                    Review these concepts before writing your program.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-3">
+
+                    <div class="card h-100 shadow-sm border-0 text-center">
+
+                        <div class="card-body p-4">
+
+                            <i class="bi bi-signpost-split fs-1 text-primary"></i>
+
+                            <h5 class="mt-3">if-else</h5>
+
+                            <p class="text-muted small">
+                                Used to make decisions based on conditions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="card h-100 shadow-sm border-0 text-center">
+
+                        <div class="card-body p-4">
+
+                            <i class="bi bi-list-check fs-1 text-success"></i>
+
+                            <h5 class="mt-3">switch</h5>
+
+                            <p class="text-muted small">
+                                Used to select an action from several choices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="card h-100 shadow-sm border-0 text-center">
+
+                        <div class="card-body p-4">
+
+                            <i class="bi bi-arrow-repeat fs-1 text-warning"></i>
+
+                            <h5 class="mt-3">while loop</h5>
+
+                            <p class="text-muted small">
+                                Repeats statements while a condition is true.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="card h-100 shadow-sm border-0 text-center">
+
+                        <div class="card-body p-4">
+
+                            <i class="bi bi-repeat fs-1 text-danger"></i>
+
+                            <h5 class="mt-3">for loop</h5>
+
+                            <p class="text-muted small">
+                                Repeats statements using initialization, condition, and update.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PART 1 -->
+    <section id="part1" class="py-5">
+
+        <div class="container">
+
+            <div class="card activity-card shadow">
+
+                <div class="activity-header student-one">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="display-6 me-3">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span class="badge bg-light text-dark mb-2">
+                                PART 1
+                            </span>
+
+                            <h2 class="mb-1">
+                                Student 1
+                            </h2>
+
+                            <p class="mb-0">
+                                Employee Salary Evaluation + Multiples of 5
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-body p-4 p-md-5">
+
+                    <!-- TASK 1 -->
+                    <h3 class="mb-3">
+                        Task 1 — Employee Salary Evaluation
+                    </h3>
+
+                    <p>
+                        Create a C++ program that evaluates an employee's salary
+                        based on the employee's years of service.
+                    </p>
+
+
+                    <div class="alert alert-success">
+
+                        <strong>Program Requirements:</strong>
+
+                        <ul class="mb-0 mt-2">
+
+                            <li>Ask for the employee name.</li>
+                            <li>Ask for the basic salary.</li>
+                            <li>Ask for the years of service.</li>
+                            <li>Determine the bonus percentage using conditional statements.</li>
+                            <li>Calculate the gross salary.</li>
+                            <li>Display the required information.</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Bonus table -->
+                    <h5 class="mt-4">
+                        Bonus Rules
+                    </h5>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered table-hover">
+
+                            <thead class="table-dark">
+
+                                <tr>
+                                    <th>Years of Service</th>
+                                    <th>Bonus</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>10 years or more</td>
+                                    <td><strong>20%</strong></td>
+                                </tr>
+
+                                <tr>
+                                    <td>6–9 years</td>
+                                    <td><strong>15%</strong></td>
+                                </tr>
+
+                                <tr>
+                                    <td>3–5 years</td>
+                                    <td><strong>10%</strong></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Below 3 years</td>
+                                    <td><strong>5%</strong></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                    <!-- REQUIRED INPUT -->
+                    <div class="card border-primary shadow-sm mt-4">
+
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">
+                                <i class="bi bi-keyboard me-2"></i>
+                                Required Input
+                            </h5>
+                        </div>
+
+                        <div class="card-body">
+
+                            <p>
+                                Your program must ask the user for the following information
+                                <strong>in this order:</strong>
+                            </p>
+
+                            <!-- Input Format -->
+                            <div class="code-box mb-4">
+                                Name:<br>
+                                Salary:<br>
+                                Year of Service:
+                            </div>
+
+                            <!-- Example Input -->
+                            <h6 class="fw-bold">
+                                <i class="bi bi-terminal me-2"></i>
+                                Example Input
+                            </h6>
+
+                            <div class="output-box">
+                                Name: Juan Dela Cruz<br>
+                                Salary: 30000<br>
+                                Year of Service: 7
+                            </div>
+
+                            <div class="alert alert-info mt-4 mb-0">
+
+                                <i class="bi bi-info-circle-fill me-2"></i>
+
+                                <strong>Important:</strong>
+                                After receiving the input, your program must determine the
+                                employee's bonus based on the
+                                <strong>Year of Service</strong>, then calculate the
+                                <strong>Gross Salary</strong>.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROGRAM FLOW -->
+                    <div class="card border-0 shadow-sm mt-4">
+
+                        <div class="card-body">
+
+                            <h5 class="mb-4">
+                                <i class="bi bi-diagram-3 me-2 text-primary"></i>
+                                Program Flow
+                            </h5>
+
+                            <div class="row g-3 text-center">
+
+                                <!-- INPUT -->
+                                <div class="col-md-4">
+
+                                    <div class="card h-100 border-primary">
+
+                                        <div class="card-body">
+
+                                            <div class="fs-1 text-primary mb-2">
+                                                <i class="bi bi-keyboard"></i>
+                                            </div>
+
+                                            <h5 class="text-primary">
+                                                INPUT
+                                            </h5>
+
+                                            <div class="code-box text-start mt-3">
+                                                Name:<br>
+                                                Salary:<br>
+                                                Year of Service:
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- PROCESS -->
+                                <div class="col-md-4">
+
+                                    <div class="card h-100 border-warning">
+
+                                        <div class="card-body">
+
+                                            <div class="fs-1 text-warning mb-2">
+                                                <i class="bi bi-gear"></i>
+                                            </div>
+
+                                            <h5 class="text-warning">
+                                                PROCESS
+                                            </h5>
+
+                                            <div class="text-start mt-3">
+
+                                                <p class="mb-2">
+                                                    <i class="bi bi-check2-circle me-2"></i>
+                                                    Determine Bonus Rate
+                                                </p>
+
+                                                <p class="mb-2">
+                                                    <i class="bi bi-check2-circle me-2"></i>
+                                                    Calculate Bonus
+                                                </p>
+
+                                                <p class="mb-0">
+                                                    <i class="bi bi-check2-circle me-2"></i>
+                                                    Calculate Gross Salary
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- OUTPUT -->
+                                <div class="col-md-4">
+
+                                    <div class="card h-100 border-success">
+
+                                        <div class="card-body">
+
+                                            <div class="fs-1 text-success mb-2">
+                                                <i class="bi bi-display"></i>
+                                            </div>
+
+                                            <h5 class="text-success">
+                                                OUTPUT
+                                            </h5>
+
+                                            <div class="code-box text-start mt-3">
+                                                Name:<br>
+                                                Gross Salary:<br>
+                                                Bonus:
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Formula -->
+                    <div class="card bg-light border-0 mt-4">
+
+                        <div class="card-body">
+
+                            <h5>
+                                <i class="bi bi-calculator me-2"></i>
+                                Calculation
+                            </h5>
+
+                            <p class="mb-1">
+                                <strong>Bonus Amount = Basic Salary × Bonus Rate</strong>
+                            </p>
+
+                            <p class="mb-0">
+                                <strong>Gross Salary = Basic Salary + Bonus Amount</strong>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hints -->
+                    <div class="mt-4">
+
+                        <h5>
+                            Suggested Program Flow
+                        </h5>
+
+                        <div class="d-flex gap-3 mb-3">
+
+                            <div class="step-number bg-primary">
+                                1
+                            </div>
+
+                            <div>
+                                <strong>Declare variables</strong>
+                                <br>
+                                Store the employee name, salary, years of service,
+                                bonus rate, bonus amount, and gross salary.
+                            </div>
+
+                        </div>
+
+
+                        <div class="d-flex gap-3 mb-3">
+
+                            <div class="step-number bg-primary">
+                                2
+                            </div>
+
+                            <div>
+                                <strong>Get the input</strong>
+                                <br>
+                                Use <code>cin</code> to receive the employee information.
+                            </div>
+
+                        </div>
+
+
+                        <div class="d-flex gap-3 mb-3">
+
+                            <div class="step-number bg-primary">
+                                3
+                            </div>
+
+                            <div>
+                                <strong>Determine the bonus rate</strong>
+                                <br>
+                                Use <code>if</code>, <code>else if</code>, and
+                                <code>else</code>.
+                            </div>
+
+                        </div>
+
+
+                        <div class="d-flex gap-3 mb-3">
+
+                            <div class="step-number bg-primary">
+                                4
+                            </div>
+
+                            <div>
+                                <strong>Calculate</strong>
+                                <br>
+                                Calculate the bonus amount and gross salary.
+                            </div>
+
+                        </div>
+
+
+                        <div class="d-flex gap-3">
+
+                            <div class="step-number bg-primary">
+                                5
+                            </div>
+
+                            <div>
+                                <strong>Display the result</strong>
+                                <br>
+                                Display the employee name, gross salary, and bonus.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <hr class="my-5">
+
+
+                    <!-- MULTIPLES OF 5 -->
+                    <h3 class="mb-3">
+                        Multiples of 5
+                    </h3>
+
+                    <div class="alert alert-warning">
+
+                        <strong>Instruction:</strong>
+
+                        <p class="mb-0 mt-2">
+                            Create a C++ program using a
+                            <strong>while loop</strong>
+                            that displays the following numbers:
+                        </p>
+
+                    </div>
+
+
+                    <div class="code-box text-center">
+
+                        5 10 15 20 25 30
+
+                    </div>
+
+
+                    <h5 class="mt-4">
+                        Important Requirement
+                    </h5>
+
+                    <ul>
+
+                        <li>You must use a <strong>while loop</strong>.</li>
+
+                        <li>Do not manually type every number using separate
+                            <code>cout</code> statements.
+                        </li>
+
+                        <li>The numbers must increase by <strong>5</strong>.</li>
+
+                        <li>The loop must stop after displaying <strong>30</strong>.</li>
+
+                    </ul>
+
+
+                    <div class="card border-success mt-4">
+
+                        <div class="card-body">
+
+                            <h5 class="text-success">
+                                Think About the Logic
+                            </h5>
+
+                            <p class="mb-2">
+                                Ask yourself:
+                            </p>
+
+                            <ul class="mb-0">
+
+                                <li>What should the starting value be?</li>
+
+                                <li>What condition should the <code>while</code>
+                                    loop check?</li>
+
+                                <li>How much should the variable increase after
+                                    every repetition?</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PART 2 -->
+    <section id="part2" class="py-5">
+
+        <div class="container">
+
+            <div class="card activity-card shadow">
+
+                <div class="activity-header student-two">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="display-6 me-3">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span class="badge bg-light text-dark mb-2">
+                                PART 2
+                            </span>
+
+                            <h2 class="mb-1">
+                                Student 2
+                            </h2>
+
+                            <p class="mb-0">
+                                Food Ordering System + Multiples of 5
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-body p-4 p-md-5">
+
+                    <!-- TASK 2 -->
+                    <h3 class="mb-3">
+                        Task 2 — Food Ordering System
+                    </h3>
+
+                    <p>
+                        Create a C++ program that allows a customer to select a
+                        food item and quantity, then calculates the subtotal.
+                    </p>
+
+
+                    <!-- MENU -->
+                    <h5 class="mt-4">
+                        Food Menu
+                    </h5>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered table-hover">
+
+                            <thead class="table-dark">
+
+                                <tr>
+                                    <th>Choice</th>
+                                    <th>Food</th>
+                                    <th>Price</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>Burger</td>
+                                    <td>₱80</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>Pizza</td>
+                                    <td>₱150</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>Pasta</td>
+                                    <td>₱120</td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>Chicken</td>
+                                    <td>₱100</td>
+                                </tr>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td>Sandwich</td>
+                                    <td>₱70</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- INPUT -->
+                    <div class="alert alert-primary mt-4">
+
+                        <strong>Ask for:</strong>
+
+                        <ul class="mb-0 mt-2">
+
+                            <li>Customer name</li>
+                            <li>Food choice</li>
+                            <li>Quantity</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- SWITCH -->
+                    <div class="card border-primary mt-4">
+
+                        <div class="card-body">
+
+                            <h5 class="text-primary">
+                                Use a switch statement
+                            </h5>
+
+                            <p>
+                                The food choice must be processed using a
+                                <strong>switch</strong> statement.
+                            </p>
+
+                            <p class="mb-0">
+                                Each case should assign the correct food price.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CALCULATION -->
+                    <h5 class="mt-4">
+                        Calculation
+                    </h5>
+
+                    <div class="card bg-light border-0">
+
+                        <div class="card-body">
+
+                            <p class="mb-2">
+                                <strong>Subtotal = Price × Quantity</strong>
+                            </p>
+
+                            <p class="mb-0">
+                                Example:
+                                ₱80 × 3 = <strong>₱240</strong>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OUTPUT -->
+                    <h5 class="mt-4">
+                        Required Output
+                    </h5>
+
+                    <div class="output-box">
+
+                        Customer: Maria Santos<br>
+                        Order: Burger<br>
+                        Quantity: 3<br>
+                        Price: ₱80<br>
+                        Subtotal: ₱240
+
+                    </div>
+
+
+                    <!-- FLOW -->
+                    <h5 class="mt-5">
+                        Suggested Program Flow
+                    </h5>
+
+
+                    <div class="d-flex gap-3 mb-3">
+
+                        <div class="step-number bg-primary">
+                            1
+                        </div>
+
+                        <div>
+
+                            <strong>Display the menu</strong>
+
+                            <br>
+
+                            Show all five food choices and their prices.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex gap-3 mb-3">
+
+                        <div class="step-number bg-primary">
+                            2
+                        </div>
+
+                        <div>
+
+                            <strong>Get customer information</strong>
+
+                            <br>
+
+                            Ask for the customer's name, food choice, and quantity.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex gap-3 mb-3">
+
+                        <div class="step-number bg-primary">
+                            3
+                        </div>
+
+                        <div>
+
+                            <strong>Use switch</strong>
+
+                            <br>
+
+                            Determine the price based on the selected food.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex gap-3 mb-3">
+
+                        <div class="step-number bg-primary">
+                            4
+                        </div>
+
+                        <div>
+
+                            <strong>Calculate subtotal</strong>
+
+                            <br>
+
+                            Multiply the selected price by the quantity.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex gap-3">
+
+                        <div class="step-number bg-primary">
+                            5
+                        </div>
+
+                        <div>
+
+                            <strong>Display the order</strong>
+
+                            <br>
+
+                            Display all required information.
+
+                        </div>
+
+                    </div>
+
+
+                    <hr class="my-5">
+
+
+                    <!-- MULTIPLES OF 5 -->
+                    <h3 class="mb-3">
+                        Multiples of 5
+                    </h3>
+
+                    <div class="alert alert-warning">
+
+                        <strong>Instruction:</strong>
+
+                        <p class="mb-0 mt-2">
+                            Create a C++ program using a
+                            <strong>for loop</strong>
+                            to display the following sequence:
+                        </p>
+
+                    </div>
+
+
+                    <div class="code-box">
+
+                        5<br>
+                        10<br>
+                        15<br>
+                        20<br>
+                        25<br>
+                        30
+
+                    </div>
+
+
+                    <h5 class="mt-4">
+                        Important Requirement
+                    </h5>
+
+                    <ul>
+
+                        <li>You must use a <strong>for loop</strong>.</li>
+
+                        <li>The sequence must begin at <strong>5</strong>.</li>
+
+                        <li>The value must increase by <strong>5</strong>.</li>
+
+                        <li>The final number must be <strong>30</strong>.</li>
+
+                        <li>Each number should be displayed using the loop.</li>
+
+                    </ul>
+
+
+                    <div class="card border-primary mt-4">
+
+                        <div class="card-body">
+
+                            <h5 class="text-primary">
+                                Think About the Loop
+                            </h5>
+
+                            <p>
+                                A <code>for</code> loop normally contains three
+                                important parts:
+                            </p>
+
+                            <div class="code-box">
+
+                                initialization; condition; update
+
+                            </div>
+
+                            <p class="mt-3 mb-0">
+                                Determine what values should be placed in each
+                                part to generate the required sequence.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GENERAL RULES -->
+    <section id="submission" class="py-5 bg-white">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title">
+                    Activity Rules & Submission
+                </h2>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="card-body p-4">
+
+                            <h4>
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Programming Rules
+                            </h4>
+
+                            <ul class="mt-3">
+
+                                <li>Use C++.</li>
+
+                                <li>Use the required control structure for your assigned task.</li>
+
+                                <li>Follow the required output format.</li>
+
+                                <li>Use meaningful variable names.</li>
+
+                                <li>Indent your code properly.</li>
+
+                                <li>Test your program before submitting.</li>
+
+                                <li>Your program should compile without errors.</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="card-body p-4">
+
+                            <h4>
+                                <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>
+                                Remember
+                            </h4>
+
+                            <ul class="mt-3">
+
+                                <li>Do not complete the wrong student version.</li>
+
+                                <li>Student 1 must use a <strong>while loop</strong>.</li>
+
+                                <li>Student 2 must use a <strong>for loop</strong>.</li>
+
+                                <li>Student 2 must use <strong>switch</strong>
+                                    for the food selection.</li>
+
+                                <li>Do not simply hard-code the required sequence.</li>
+
+                                <li>Check your output carefully before submission.</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+    <!-- FOOTER -->
+    <footer class="py-4">
+
+        <div class="container text-center">
+
+            <h5 class="mb-1">
+                IT102 – Computer Programming
+            </h5>
+
+            <p class="mb-0 text-white-50">
+                Midterm Activity 1 • C++ Programming
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
